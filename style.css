@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Dancing Script', sans-serif;
+    background: url(waves.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    padding: 40px 40px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    justify-content: space-between;
+    background-color: rgba(114, 112, 112, 0.377);
+    backdrop-filter: saturate(120%) blur(10%);
+    background-blend-mode: soft-light;
+    border-radius: 10%;
+    z-index: 5;
+}
+
+.banner{
+    align-items: center;
+    align-self: center;
+    color: #000000;
+    padding: 10px 10px;
+}
+
+.banner h1{
+    font: 2.5rem bold;
+    color: black;
+}
+
+
+p{
+    font: 1rem;
+    margin: 10px;
+}
+
+.options{
+    width: 80%;
+    margin: 10px 10px;
+    display: flex;
+    justify-content: space-around;
+    pointer-events: none;
+}
+
+.options i{
+    font-size: 70px;
+    padding: 20px 20px;
+    pointer-events: all;
+    cursor: grab;
+    color: rgb(52, 49, 235);
+    transition: all ease 1s 0.1s ;
+    margin-bottom: 0%;
+}
+
+.options i:hover{
+    color: red;
+    font-size: 75px;
+    transform: rotate(720deg);
+}
+
+.Choice{
+    padding: 0;
+    margin: 10%;
+    opacity: 0.9;
+    color: whitesmoke;
+    font: 40px  bold;
+}
+
+#CompChoice{
+    color: blueviolet;
+    font: 50px bold;
+}
+
+#CompChoiceIcon{
+    color: violet;
+    font-size: 50px;
+}
+
+.results{
+    color: #d41424;
+    font: 50px bold;
+    animation-name: colorfill;
+    animation-duration: 5s;
+    animation-delay: 0.5s;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes colorfill{
+    from{
+        color: #d41424;
+        bottom: 0px;
+    }
+
+    to{
+        color: #124fc0;
+        bottom: 50px;
+
+    }
+}
+
+
+/* small screen implementation */
+@media screen and (max-width: 600px) {
+
+    body{
+        padding: 10px 10px;
+    }
+
+    .banner{
+        padding: 10px 10px;
+    }
+
+    .banner h1{
+        font: 1.5rem bold;
+        color: black;
+    }
+
+
+    .options i{
+        font-size: 50px;
+        padding: 10px 10px;
+    }
+
+    #CompChoice{
+        font-size: 15px;
+    }
+    
+    #CompChoiceIcon{
+        font-size: 20px;
+    }
+    .Choice{
+        padding: 0;
+        margin: 5%;
+        opacity: 0.9;
+        color: whitesmoke;
+        font: 20px  bold;
+    }
+}
